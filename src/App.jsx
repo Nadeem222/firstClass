@@ -41,7 +41,7 @@ function App() {
 
   return (
     <>
-  <div className='flex gap-2 w-full flex-wrap justify-center py-2' >
+  <div className='flex gap-2 w-full flex-wrap justify-center py-2 dark:bg-black' >
 
         {product.map((item)=> {
         return  <Card key={item.id} product={item} />
