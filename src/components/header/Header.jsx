@@ -2,17 +2,13 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import useTheme from "../../context/themeMode";
 
-
 export default function Header() {
+  const { themeMode, lightMode, darkMode } = useTheme();
 
-  const {themeMode , lightMode , darkMode} = useTheme()
-
-
-  const onChangeBtn = (e) =>{
-    const darkModeStatus = e.currentTarget.checked
-    darkModeStatus ? darkMode() : lightMode()
-    
-  }
+  const onChangeBtn = (e) => {
+    const darkModeStatus = e.currentTarget.checked;
+    darkModeStatus ? darkMode() : lightMode();
+  };
   return (
     <header className="shadow sticky z-50 top-0">
       <nav className="bg-white dark:bg-black dark:text-white border-gray-200 px-4 lg:px-6 py-2.5">
@@ -69,7 +65,7 @@ export default function Header() {
                                     border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                   }
                 >
-                  Home
+                  Project 1
                 </NavLink>
               </li>
               <li>
@@ -85,7 +81,7 @@ export default function Header() {
                                     border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                   }
                 >
-                  Product
+                  Project 2
                 </NavLink>
               </li>
             </ul>
